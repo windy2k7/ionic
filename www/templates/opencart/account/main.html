@@ -1,0 +1,132 @@
+<ion-view view-title="Accounts">
+    <ion-content>
+        <div class="bar bar-header" ng-if="page === 'login' || page === 'register'" >
+            <!-- Login - Register -->
+            <div class="button-bar">
+                <a class="button {{page == 'login'      ? 'activated' : ''}}" ng-click="goPage('login')">Login</a>
+                <a class="button {{page == 'register'   ? 'activated' : ''}}" ng-click="goPage('register')">Register</a>                    
+            </div>
+        </div>
+        <!-- Login - Register -->
+        <div ng-if="page === 'login'" class="content has-header padding">
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password">
+            </label>
+            <button class="button button-block button-positive">
+               Login
+            </button>
+        </div>
+        <div ng-if="page === 'register'" class="content has-header padding">
+            <h4>Your Personal Detail</h4>
+            <label class="item item-input">
+                <span class="input-label">First Name</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Telephone</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Telephone</span>
+                <input type="text">
+            </label>
+            <h4>Your Address</h4>
+            <label class="item item-input">
+                <span class="input-label">Company</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Company Id</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Address</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">City</span>
+                <input type="text">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                   Country
+                </div>
+                <select>
+                    <option>Vietnam</option>
+                    <option selected>Lao</option>
+                    <option>Thailand</option>
+                    <option>Singapore</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                   Region / State:
+                </div>
+                <select>
+                    <option>Blue</option>
+                    <option selected>Green</option>
+                    <option>Red</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Post Code</span>
+                <input type="text">
+            </label>
+            <h4>Your Password</h4>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password Confirm</span>
+                <input type="password">
+            </label>            
+            <button class="button button-block button-positive">
+               Register
+            </button>
+        </div>
+        <div ng-if="page === 'profile'" class="content has-header padding">
+            <div class="row">
+                <div class="col col-50 col-center">
+                    <div class="card padding-vertical">
+                        <i class="icon ion-person icon-x4"></i><br/>
+                        Orders
+                    </div>
+                </div>
+                <div class="col col-50 col-center">
+                    <div class="card padding-vertical">
+                        <i class="icon ion-bag icon-x4"></i><br/>
+                        Orders
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col col-50 col-center">
+                    <div class="card padding-vertical">
+                        <i class="icon ion-location icon-x4"></i><br/>
+                        Address
+                    </div>
+                </div>
+                <div class="col col-50 col-center">
+                    <div class="card padding-vertical">
+                        <i class="icon ion-email icon-x4"></i><br/>
+                        Notification
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

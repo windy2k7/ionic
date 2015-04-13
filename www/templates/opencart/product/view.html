@@ -1,0 +1,67 @@
+<ion-view view-title="Product">
+    <ion-content class="padding">        
+        <div class="list card product">            
+            <!-- Have only 1 image -->
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{product.popup}}">                
+            </div>                           
+            <!-- Have many images -->
+            <ion-scroll direction="x" class="scroll-box">
+                <a class="button margin-right" ng-repeat="image in product.images" ng-click="product.popup = image.popup" >
+                    <img class="full-image" ng-src="{{image.thumb}}"> 
+                </a>
+            </ion-scroll> 
+            <!-- Basic Information -->
+            <div class="item">                
+                <h2 class="name" ng-bind-html="product.heading_title"></h2>
+                <p><i class="icon ion-briefcase"></i> {{product.manufacturer}}</p>
+                <p class="price" ng-if="!product.special"><i class="icon ion-pricetags"></i> {{product.price}}</p>
+                <p class="price" ng-if="product.special"><i class="icon ion-pricetags"></i> <span class="price-old">{{product.price}}</span>  <span class="assertive price-new">{{product.special}}</span></p>
+                <p ng-if="product.model"><i class="icon ion-document-text"></i> {{product.model}}</p>
+                <p ng-if="product.reward"><i class="icon ion-ribbon-a"></i> {{product.reward}}</p>
+                <p ng-if="product.points"><i class="icon ion-ribbon-b"></i> {{product.points}}</p>
+                <p ng-if="product.stock"><i class="icon ion-shuffle"></i> {{product.stock}}</p>
+                <p ng-if="product.tax"><i class="icon ion-cash"></i> {{product.tax}}</p>                
+                <a class="button button-calm" href="#/app/reviews/{{product.product_id}}">Reviews</a>               
+                <a class="button button-calm" ng-click="cart.add(product.product_id)">Add to Cart</a>               
+            </div>
+        </div>              
+        <!-- Attributes -->        
+        <div class="card" ng-repeat="att in product.attribute_groups">
+            <div class="item item-divider">
+                {{att.name}}
+            </div>
+            <div class="item item-text-wrap">
+                <div class="row" ng-repeat="att_item in att.attribute">
+                    <div class="col col-25">{{att_item.name}}</div>
+                    <div class="col col-75">{{att_item.text}}</div>                    
+                </div>
+            </div>
+        </div>
+        <!-- Description -->        
+        <div class="card">
+            <div class="item item-divider item-icon-right">
+                Description
+                <i class="icon ion-arrow-right-b" ng-click="showDescription()" ></i>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="product.description_short" ></div>
+        </div>
+        <hr/>
+        <!-- Related Products -->
+        <div class="card">
+            <div class="item item-divider">
+                Related Product                
+            </div>
+            <div class="item item-text-wrap">
+                <ion-scroll direction="x" class="scroll-box">
+                    <a class="button related-product margin-right product" ng-repeat="related in product.products" href="#/app/product/{{related.product_id}}" >
+                        <img src="{{related.thumb}}">
+                        <br class="clearfix"/>
+                        <p class="price" ng-if="!related.special">{{related.price}}</p>
+                        <p class="price" ng-if="related.special"><span class="price-old">{{related.price}}</span>  <span class="assertive price-new">{{related.special}}</span></p>
+                    </a>
+                </ion-scroll> 
+            </div>
+        </div>              
+    </ion-content>
+</ion-view>

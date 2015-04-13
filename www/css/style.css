@@ -1,1 +1,57 @@
-/* Empty. Add your own CSS if you like */
+.center,
+.col-center{
+    text-align: center;
+}
+.icon-x2{
+    font-size: 2em;
+}
+.icon-x3{
+    font-size: 4em;
+}
+.icon-x4{
+   font-size: 7em;
+}
+.icon-x5{
+  font-size: 12em;
+}
+.icon-x5{
+  font-size: 20em;
+}
+
+//Contact
+.button.button-icon.input-button {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: #bbb;
+}
+.item img.avata {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.list .my-item.item {
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.input-search-contact{
+    padding: 0px;
+}
+
+/*Wordpress Module*/
+.wp.dashboard{
+    color: #fff;
+}
+.wp.dashboard{
+    background-image: url('../img/wordpress/wp_dashboard_1280_800.jpg');
+    
+}
+.wp.dashboard .icon{
+    color: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}

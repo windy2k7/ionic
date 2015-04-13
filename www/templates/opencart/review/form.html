@@ -1,0 +1,32 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Comment</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="productReviewFormModal.hide()"><i class="icon ion-close"></i></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" ng-model="review.name" placeholder="Name">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="review.text" placeholder="Comment">
+            </label>
+            <label class="item item-input">
+                <div class="item range range-calm">
+                    <i class="icon ion-ios7-lightbulb-outline"></i>
+                    <input ng-model="review.rating" type="range" name="volume" min="1" max="5" value="1">
+                    <i class="icon ion-ios7-lightbulb"></i>
+                </div>
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="review.captcha" placeholder="Capcha">
+            </label>
+            <label class="item item-input">
+                <img src="{{urlCapcha}}" alt="" id="captcha" />
+            </label>
+            <button class="button button-calm" ng-click="saveReview()">Save</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

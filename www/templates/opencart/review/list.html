@@ -1,0 +1,23 @@
+<ion-view view-title="Reviews">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div class="list">
+                <a ng-click="showDetail(review)" class="item item-avatar" ng-repeat="review in reviews">                
+                    <h2>{{review.author}} | {{review.rating}} | {{review.date_added}}</h2>
+                    <p>{{review.text}}</p>
+                </a>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll
+            ng-if="moreDataCanBeLoaded()"
+            icon="ion-loading-c"
+            on-infinite="loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
+

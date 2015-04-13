@@ -1,0 +1,27 @@
+<ion-view view-title="Products">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div class="list products">
+                <a ng-repeat="product in products" 
+                   href="#/app/product/{{product.product_id}}"
+                   class="item item-thumbnail-left">
+                    <img ng-src="{{product.thumb}}">
+                    <h2 class="name" ng-bind-html="product.name"></h2> 
+                    <p ng-bind-html="product.description"></p>                
+                    <p class="price" ng-if="!product.special" >{{product.price}}</p>
+                    <p class="price" ng-if="product.special" ><span class="price-old">{{product.price}}</span>  <span class="assertive price-new">{{product.special}}</span></p>
+                </a>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll
+            ng-if="moreDataCanBeLoaded()"
+            icon="ion-loading-c"
+            on-infinite="loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
