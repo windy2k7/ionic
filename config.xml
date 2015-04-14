@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>PhoneGap Example</name>
+    <name>Ionic Application</name>
 
     <description>
         An Ionic Framework and Cordova project.
