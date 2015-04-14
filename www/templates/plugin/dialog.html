@@ -1,0 +1,33 @@
+<ion-view view-title="Dialogs">
+    <ion-content>
+        <div class="bar bar-header bar-assertive" ng-if="error">
+            <h1 class="title">{{error}}</h1>
+        </div>
+        <div class="list">
+            <div class="item item-button-right">
+                Alert
+                <button class="button button-positive" ng-click="alert()">
+                    <i class="icon ion-alert"></i>
+                </button>
+            </div>                             
+            <div class="item item-button-right">
+                Confirm
+                <button class="button button-positive" ng-click="confirm()">
+                    <i class="icon ion-help-circled"></i>
+                </button>
+            </div>                             
+            <div class="item item-button-right">
+               Prompt
+                <button class="button button-positive" ng-click="prompt()">
+                    <i class="icon ion-alert-circled"></i>
+                </button>
+            </div>                             
+            <div class="item item-button-right">
+               Beep
+                <button class="button button-positive" ng-click="beep()">
+                    <i class="icon ion-volume-medium"></i>
+                </button>
+            </div>                             
+        </div>
+    </ion-content>
+</ion-view>

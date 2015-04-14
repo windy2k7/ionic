@@ -1,0 +1,35 @@
+<ion-view view-title="Geo Location">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">Information</div>
+            <a class="item " href="javascript:void(0)">
+              Long
+              <span class="item-note">
+                {{geo.long}}
+              </span>
+            </a>          
+            <a class="item " href="javascript:void(0)">
+              Lat
+              <span class="item-note">
+                {{geo.lat}}
+              </span>
+            </a>   
+            <div class="item item-divider">Globalization</div>
+            <a class="item " href="javascript:void(0)">
+              Prefer Language
+              <span class="item-note" ng-if="!globalError.preferredLanguage">{{global.preferredLanguage}}</span>
+              <span class="item-note" ng-if="globalError.preferredLanguage">{{globalError.preferredLanguage}}</span>
+            </a>         
+            <a class="item " href="javascript:void(0)">
+              Location Name
+              <span class="item-note" ng-if="!globalError.localeName">{{global.localeName}}</span>
+              <span class="item-note" ng-if="globalError.localeName">{{globalError.localeName}}</span>
+            </a> 
+            <a class="item " href="javascript:void(0)">
+              First Day Of Week
+              <span class="item-note" ng-if="!globalError.firstDayOfWeek">{{global.firstDayOfWeek}}</span>
+              <span class="item-note" ng-if="globalError.firstDayOfWeek">{{globalError.firstDayOfWeek}}</span>
+            </a> 
+        </div>
+    </ion-content>
+</ion-view>

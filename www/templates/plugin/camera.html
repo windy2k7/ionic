@@ -1,0 +1,25 @@
+<ion-view view-title="Camera">
+  <ion-content> 
+    <div class="bar bar-header bar-assertive" ng-if="error">
+          <h1 class="title">{{error}}</h1>
+      </div>
+    <div class="list card">
+        <div class="item item-avatar">
+          <img src="http://tutupash.com/site/assets/nin_logo.jpeg">
+          <h2>Paul Thai</h2>
+          <p>Ionic/Cordova Demo</p>
+        </div>
+        <div class="item item-image">
+          <img id="myImage" src="{{image}}">
+        </div>
+        <div class="row">        
+  	        <div class="col col-center padding-horizontal padding-vertical">
+  	            <i class="icon ion-qr-scanner icon-x3" ng-click="camera.open()"></i><br/> Camera
+  	        </div> 
+  	        <div class="col col-center padding-horizontal padding-vertical">
+  	            <i class="icon ion-close-circled icon-x3" ng-click="camera.reset()"></i><br/> Reset</a>                    
+  	        </div>                     
+  	    </div>        
+    </div>
+	</ion-content>
+</ion-view>
