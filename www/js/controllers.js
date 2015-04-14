@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
         timeStamp : 300, //default
         showModal : function()
         {
-            $ionicModal.fromTemplateUrl('templates/plugins/vibration.html', {
+            $ionicModal.fromTemplateUrl('templates/plugin/vibration.html', {
                 scope: $scope
             }).then(function(modal) {
                 $scope.vibrationModal = modal;
