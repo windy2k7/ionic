@@ -101,15 +101,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     }
                 }
             })
-            .state('app.news', {
-                url: "/news",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/news/list.html",
-                        controller: 'NewsCtrl'
-                    }
-                }
-            })
             .state('app.setting', {
                 url: "/setting",
                 views: {
@@ -128,30 +119,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     }
                 }
             })
-            .state('app.wordpress-news', {
-                url: "/wordpress/news",
+            .state('app.wordpress.news', {
+                url: "/news",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/wordpress/news.html",
                         controller: 'WordpressNewsCtrl'
                     }
                 }
             })
-            // .state('app.wordpress', {
-            //     url: "/app/wordpress",
-            //     abstract: true,
-            //     templateUrl: "templates/wordpress/menu.html",
-            //     controller: 'WordpressCtrl'
-            // })
-            // .state('app.wordpress.news', {
-            //     url: "/wordpress/news",
-            //     views: {
-            //         'wpContent': {
-            //             templateUrl: "templates/wordpress/news.html",
-            //             controller: 'WordpressNewsCtrl'
-            //         }
-            //     }
-            // })
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/plugins');
