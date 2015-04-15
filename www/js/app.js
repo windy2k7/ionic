@@ -110,6 +110,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     }
                 }
             })
+            //http://stackoverflow.com/questions/21818515/angularjs-nested-states-3-level
             .state('app.wordpress', {
                 url: "/wordpress",
                 views: {
