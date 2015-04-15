@@ -1,0 +1,90 @@
+<ion-view view-title="Device">
+    <ion-content>
+        <div class="bar bar-header bar-assertive" ng-if="error">
+            <h1 class="title">{{error}}</h1>
+        </div>
+        <div class="list">
+            <div class="item item-divider">Device Information</div>
+            <a class="item " href="javascript:void(0)">
+              Cordova
+              <span class="item-note">
+                {{deviceInfo.cordova}}
+              </span>
+            </a>          
+            <a class="item " href="javascript:void(0)">
+              Model
+              <span class="item-note">
+                {{deviceInfo.model}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              Flatform
+              <span class="item-note">
+                {{deviceInfo.flatform}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              UUID
+              <span class="item-note">
+                {{deviceInfo.uuid}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              Version
+              <span class="item-note">
+                {{deviceInfo.version}}
+              </span>
+            </a>
+            <div class="item item-divider">Device Motion</div>
+            <a class="item " href="javascript:void(0)">
+              X
+              <span class="item-note">
+                {{motion.x}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              Y
+              <span class="item-note">
+                {{motion.y}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              Z
+              <span class="item-note">
+                {{motion.z}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              TimeStamp
+              <span class="item-note">
+                {{motion.timeStamp}}
+              </span>
+            </a>
+            <div class="item item-divider">Device Orientation</div>
+            <a class="item " href="javascript:void(0)">
+              Magnetic Heading
+              <span class="item-note">
+                {{orientation.magneticHeading}}
+              </span>
+            </a>
+            <a class="item " href="javascript:void(0)">
+              True Heading
+              <span class="item-note">
+                {{orientation.trueHeading}}
+              </span>
+            </a>            
+            <a class="item " href="javascript:void(0)">
+              Accuracy
+              <span class="item-note">
+                {{orientation.accuracy}}
+              </span>
+            </a>            
+            <a class="item " href="javascript:void(0)">
+              timeStamp
+              <span class="item-note">
+                {{orientation.timeStamp}}
+              </span>
+            </a>            
+        </div>
+    </ion-content>
+</ion-view>

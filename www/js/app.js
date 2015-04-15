@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/plugins",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/main.html",
+                        templateUrl: "templates/plugin/main.html",
                         controller: 'PluginsCtrl'
                     }
                 }
@@ -42,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/camera",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/camera.html",
+                        templateUrl: "templates/plugin/camera.html",
                         controller: 'CameraCtrl'
                     }
                 }
@@ -51,7 +51,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/device",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/device.html",
+                        templateUrl: "templates/plugin/device.html",
                         controller: 'DeviceCtrl'
                     }
                 }
@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/geo",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/geo.html",
+                        templateUrl: "templates/plugin/geo.html",
                         controller: 'GeoCtrl'
                     }
                 }
@@ -69,7 +69,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/contacts",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/contacts.html",
+                        templateUrl: "templates/plugin/contacts.html",
                         controller: 'ContactsCtrl'
                     }
                 }
@@ -78,7 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/dialogs",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/dialog.html",
+                        templateUrl: "templates/plugin/dialog.html",
                         controller: 'DialogsCtrl'
                     }
                 }
@@ -87,7 +87,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/appbrowser",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/appbrowser.html",
+                        templateUrl: "templates/plugin/appbrowser.html",
                         controller: 'appBrowserCtrl'
                     }
                 }
@@ -96,7 +96,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 url: "/network",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/plugins/network.html",
+                        templateUrl: "templates/plugin/network.html",
                         controller: 'NetworkCtrl'
                     }
                 }

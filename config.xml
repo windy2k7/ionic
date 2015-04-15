@@ -5,7 +5,9 @@
         versionCode = "1" 
         version     = "0.0.1" >
 
-    <name>PhoneGap Example</name>
+    <!-- versionCode is optional and Android only -->
+
+    <name>Ionic Application</name>
 
     <description>
         An Ionic Framework and Cordova project.

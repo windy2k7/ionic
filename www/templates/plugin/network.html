@@ -1,0 +1,40 @@
+<ion-view view-title="Network Infomation">
+    <ion-content>
+        <div class="bar bar-header bar-assertive" ng-if="error">
+            <h1 class="title">{{error}}</h1>
+        </div>
+        <div class="list">
+            <div class="item item-divider">Information</div>
+            <a class="item " href="javascript:void(0)">
+              Type
+              <span class="item-note">
+                {{network.typeNetwork}}
+              </span>
+            </a>          
+            <a class="item " href="javascript:void(0)">
+              Online
+              <span class="item-note">
+                {{network.isOnline}}
+              </span>
+            </a>                               
+            <a class="item " href="javascript:void(0)">
+              Offline
+              <span class="item-note">
+                {{network.isOffline}}
+              </span>
+            </a>                               
+            <a class="item " href="javascript:void(0)">
+              Online State
+              <span class="item-note">
+                {{network.onlineState}}
+              </span>
+            </a>                               
+            <a class="item " href="javascript:void(0)">
+              Offline State
+              <span class="item-note">
+                {{network.offlineState}}
+              </span>
+            </a>                               
+        </div>
+    </ion-content>
+</ion-view>
