@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'wordpress.controllers', 'wordpress.services', 'ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'plugins.controllers' ,'wordpress.controllers', 'wordpress.services', 'ngCordova'])
 
 .run(function($ionicPlatform) {
 
@@ -38,79 +38,78 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     }
                 }
             })
-            .state('app.camera', {
+            .state('app.plugins.camera', {
                 url: "/camera",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/camera.html",
                         controller: 'CameraCtrl'
                     }
                 }
             })
-            .state('app.device', {
+            .state('app.plugins.device', {
                 url: "/device",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/device.html",
                         controller: 'DeviceCtrl'
                     }
                 }
             })
-            .state('app.geo', {
+            .state('app.plugins.geo', {
                 url: "/geo",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/geo.html",
                         controller: 'GeoCtrl'
                     }
                 }
             })
-            .state('app.contacts', {
+            .state('app.plugins.contacts', {
                 url: "/contacts",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/contacts.html",
                         controller: 'ContactsCtrl'
                     }
                 }
             })
-            .state('app.dialogs', {
+            .state('app.plugins.dialogs', {
                 url: "/dialogs",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/dialog.html",
                         controller: 'DialogsCtrl'
                     }
                 }
             })
-            .state('app.appbrowser', {
+            .state('app.plugins.appbrowser', {
                 url: "/appbrowser",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/appbrowser.html",
                         controller: 'appBrowserCtrl'
                     }
                 }
             })
-            .state('app.network', {
+            .state('app.plugins.network', {
                 url: "/network",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/plugin/network.html",
                         controller: 'NetworkCtrl'
                     }
                 }
             })
-            .state('app.setting', {
+            .state('app.plugins.setting', {
                 url: "/setting",
                 views: {
-                    'menuContent': {
+                    'menuContent@app': {
                         templateUrl: "templates/common/setting.html",
                         controller: 'SettingCtrl'
                     }
                 }
-            })
-            //http://stackoverflow.com/questions/21818515/angularjs-nested-states-3-level
+            })            
             .state('app.wordpress', {
                 url: "/wordpress",
                 views: {
