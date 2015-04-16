@@ -1,37 +1,6 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($state, $scope, $ionicModal, $timeout) {
-    // Form data for the login modal
-    $scope.loginData = {};
-
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/common/login.html', {
-        scope: $scope
-    }).then(function(modal) {
-        $scope.modal = modal;
-    });
-
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function() {
-        $scope.modal.hide();
-    };
-    
-    // Open the login modal
-    $scope.login = function() {
-        $scope.modal.show();
-    };
-
-    // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-        console.log('Doing login', $scope.loginData);
-
-        // Simulate a login delay. Remove this and replace with your login
-        // code if using a login system
-        $timeout(function() {
-            $scope.closeLogin();
-        }, 1000);
-    };
-
     $scope.goPage = function(page)
     {
         $state.go('app.'+page);
@@ -414,66 +383,6 @@ angular.module('starter.controllers', [])
     $rootScope.$on('$cordovaInAppBrowser:exit', function(e, event) {
 
     });
-})
-.controller('NewsCtrl', function($scope, $stateParams, $timeout, $ionicLoading, News) {
-
-    var isLoadMore = false,
-        page = 1;
-    $scope.news = [];
-    
-    $scope.$on('$stateChangeSuccess', function() {
-        $scope.loadMore();
-    });
-  
-    $scope.moreDataCanBeLoaded = function(){
-        return isLoadMore;
-    };
-    
-    $scope.loadMore = function() {
-        $timeout(function() {
-            loadList();
-        }, 300);
-    };
-    
-    $scope.doRefresh = function(){
-        page = 1;
-        $scope.news = [];       
-        loadList();
-        $scope.$broadcast('scroll.refreshComplete');
-    };
-    
-    function loadList() {
-        var params = {
-            path : $stateParams.categoryId,
-            page : page
-        };
-        $ionicLoading.show({
-            template: '<i class="icon ion-loading-c"></i> Loading...'
-        });
-        var data = News.all()
-        if (data)
-        {
-            if (data.length > 0) {
-                for (var i = 0; i < data.length; i++) {
-                    $scope.news.push(data[i]);
-                }
-                page++;
-                isLoadMore = true;
-            }
-            else{
-                isLoadMore = false;
-            }
-        }
-        else {
-            console.log(data.message);
-        }    
-
-        //Hide loading
-        isLoadMore = false;
-        $scope.$broadcast('scroll.infiniteScrollComplete');
-        $ionicLoading.hide();
-        
-    }
 })
 .controller('GeoCtrl', function($scope, $cordovaGeolocation, $cordovaGlobalization) {
     $scope.error = '';

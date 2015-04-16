@@ -19,17 +19,14 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>                
-        <ion-item nav-clear menu-close ng-click="login()">
-            <i class="icon ion-log-in"></i> Login
-        </ion-item>  
-        <ion-item nav-clear menu-close href="#/app/plugins">
+         <ion-item nav-clear menu-close ui-sref="app.plugins" >
             <i class="icon ion-home"></i> Plugins
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/wordpress">
+        <ion-item nav-clear menu-close ui-sref="app.wordpress">
             <i class="icon ion-social-wordpress"></i> Wordpress
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/setting">
-            <i class="icon ion-gear-a"></i> Setting
+        <ion-item nav-clear menu-close ui-sref="app.setting">
+            <i class="icon ion-gear-a"></i> Forms
         </ion-item>
       </ion-list>
     </ion-content>

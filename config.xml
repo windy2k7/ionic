@@ -4,11 +4,7 @@
         id          = "com.ionic.application"
         versionCode = "1" 
         version     = "0.0.1" >
-
-    <!-- versionCode is optional and Android only -->
-
     <name>Ionic Application</name>
-
     <description>
         An Ionic Framework and Cordova project.
     </description>
@@ -16,7 +12,7 @@
         Paul Thai
     </author>
     <gap:platform name="ios" />   
-    <icon src="icon.png" />    
+    <gap:platform name="android" />       
     <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
     <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
     <gap:plugin name="org.apache.cordova.media-capture" version="0.3.3" />
